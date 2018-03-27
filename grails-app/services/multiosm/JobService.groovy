@@ -5,7 +5,6 @@ import grails.gorm.services.Join
 import grails.gorm.services.Service
 
 @Service(Job)
-@CurrentTenant
 abstract class JobService {
     abstract List<Job> list(Map args)
 

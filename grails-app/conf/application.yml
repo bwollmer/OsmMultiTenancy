@@ -3,10 +3,6 @@ grails:
     profile: web
     codegen:
         defaultPackage: multiosm
-    gorm:
-        multiTenancy:
-          mode: DISCRIMINATOR
-          tenantResolverClass: multiosm.CurrentUserTenantResolver
         reactor:
             # Whether to translate GORM events into Reactor events
             # Disabled by default for performance reasons
