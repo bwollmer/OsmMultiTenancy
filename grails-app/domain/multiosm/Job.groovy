@@ -26,9 +26,10 @@ import grails.gorm.annotation.Entity
  *
  * @see Script
  */
-class Job {
+class Job implements MultiTenant<Job> {
 
     Long id;
+    String user
 
     String label;
     Location location;
@@ -57,5 +58,6 @@ class Job {
 
     static mapping = {
         persistNonMedianResults defaultValue: '1'
+        tenantId name: "user"
     }
 }
